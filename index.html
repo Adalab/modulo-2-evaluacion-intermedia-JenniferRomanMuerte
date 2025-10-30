@@ -11,6 +11,7 @@
     <h1 class="title">Juego Piedra, Papel y Tijera</h1>
     <form class="form">
       <label for="play" class="form_label">Introduce aqui tu jugada:</label>
+      <div class="form_interaction">
       <select name="play" id="play" class="form_select js-form_select">
         <option disabled selected>Seleccione su jugada</option>
         <option value="piedra">Piedra</option>
@@ -18,10 +19,11 @@
         <option value="tijera">Tijera</option>
       </select>
       <button class="form_button js-form_button">Jugar</button>
+      </div>
     </form>
-    <p class="message js-message">Vamos a jugar</p>
-    <p class="js-player_score">Jugador: 0</p>
-    <p class="js-computer_score">Computadora: 0</p>
+    <span class="message js-message">Vamos a jugar!</span>
+    <span class="score js-player_score">Jugador: 0</span>
+    <span class="score js-computer_score">Computadora: 0</span>
   </main>
 <script src="js/main.js"></script>
 </body>

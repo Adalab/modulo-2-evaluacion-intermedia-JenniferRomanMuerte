@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+
+main{
+  background-color: #e4e4e4;
+  border: 2px solid #166cbd;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+}
+
+.title{
+  color:#166cbd;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form_label{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.form_interaction{
+  display: flex;
+  gap: 1rem;
+}
+
+.form_select{
+  padding: 0.5rem;
+  border: 1px solid #166cbd;
+}
+
+.form_button{
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  background-color: #166cbd;
+  color: #fff;
+  border-radius: 5px;
+  border: 2px solid #114f88;
+}
+
+.message{
+  background-color: #166cbd;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.score{
+  font-size: 1.5rem;
+  font-weight: 600;
+}

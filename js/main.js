@@ -5,6 +5,7 @@ const buttonResetElement = document.querySelector(".js-reset_button");
 const textElement = document.querySelector(".js-message");
 const playerScoreElement = document.querySelector(".js-player_score");
 const computerScoreElement = document.querySelector(".js-computer_score");
+const runsElement = document.querySelector('.js-runs');
 
 // Contadores de puntos
 let counter_player_score = 0;
@@ -13,6 +14,16 @@ let counter_computer_score = 0;
 // Contador de tiradas
 let runs = 0;
 
+const winner = () =>{
+  if(counter_player_score > counter_computer_score){
+    textElement.innerHTML = "Ha ganado la usuaria";
+    textElement.style.backgroundColor = 'green';
+  }else{
+    textElement.innerHTML = "Ha ganado la computadora";
+    textElement.style.backgroundColor = 'red';
+  }
+
+}
 const reset = ()=>{
   buttonElement.classList.add('hidden');
   buttonResetElement.classList.remove('hidden');
@@ -80,8 +91,9 @@ buttonElement.addEventListener("click", (ev) => {
   const option_computer = optionComputer(number_random);
   move(option_player, option_computer);
   runs +=1;
-  console.log('Tiradas:' + runs);
+  runsElement.innerHTML = `Tiradas: ${runs}`;
   if(runs === 10){
     reset();
+    winner();
   }
 });

@@ -1,6 +1,7 @@
 "use strict";
 const optionElement = document.querySelector(".js-form_select");
 const buttonElement = document.querySelector(".js-form_button");
+const buttonResetElement = document.querySelector(".js-reset_button");
 const textElement = document.querySelector(".js-message");
 const playerScoreElement = document.querySelector(".js-player_score");
 const computerScoreElement = document.querySelector(".js-computer_score");
@@ -8,6 +9,15 @@ const computerScoreElement = document.querySelector(".js-computer_score");
 // Contadores de puntos
 let counter_player_score = 0;
 let counter_computer_score = 0;
+
+// Contador de tiradas
+let runs = 0;
+
+const reset = ()=>{
+  buttonElement.classList.add('hidden');
+  buttonResetElement.classList.remove('hidden');
+
+}
 
 const score = (winner) => {
   if (winner === "player") {
@@ -69,4 +79,9 @@ buttonElement.addEventListener("click", (ev) => {
   const number_random = getRandomNumber(9);
   const option_computer = optionComputer(number_random);
   move(option_player, option_computer);
+  runs +=1;
+  console.log('Tiradas:' + runs);
+  if(runs === 10){
+    reset();
+  }
 });
